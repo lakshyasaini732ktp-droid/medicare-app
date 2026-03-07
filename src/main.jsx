@@ -11,11 +11,7 @@ function Root() {
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (u) => {
-      if (u && u.emailVerified) {
-        setUser(u);
-      } else {
-        setUser(null);
-      }
+      setUser(u && u.emailVerified ? u : null);
       setLoading(false);
     });
     return unsub;
@@ -31,7 +27,6 @@ function Root() {
   );
 
   if (!user) return <AuthPage onLogin={setUser} />;
-
   return <App user={user} onLogout={() => signOut(auth).then(() => setUser(null))} />;
 }
 

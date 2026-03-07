@@ -1,7 +1,7 @@
 {
   "name": "medicare-app",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "firebase": "^10.7.0"
+    "firebase": "^10.7.0",
+    "@emailjs/browser": "^4.3.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
